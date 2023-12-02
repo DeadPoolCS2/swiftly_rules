@@ -28,20 +28,20 @@ void OnProgramLoad(const char *pluginName, const char *mainFilePath)
 
 void Command_Test(int playerID, const char **args, uint32_t argsCount, bool silent)
 {
-        Player *player = g_playerManager->GetPlayer(playerID);
-        if (!player)
-            return;
-
-        player->SendMsg(HUD_PRINTTALK, "[1TAP] -----------------------------------------------------");
-        player->SendMsg(HUD_PRINTTALK, "Rule 1: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 2: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 3: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 4: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 5: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 6: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 7: "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 8: "config->Fetch<const char*>("rules.rule1"),);
+    Player *player = g_playerManager->GetPlayer(playerID);
+    if (!player)
         return;
+
+    player->SendMsg(HUD_PRINTTALK, ("[1TAP] -----------------------------------------------------"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 1: ") + config->Fetch<const char*>("rules.rule1"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 2: ") + config->Fetch<const char*>("rules.rule2"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 3: ") + config->Fetch<const char*>("rules.rule3"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 4: ") + config->Fetch<const char*>("rules.rule4"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 5: ") + config->Fetch<const char*>("rules.rule5"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 6: ") + config->Fetch<const char*>("rules.rule6"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 7: ") + config->Fetch<const char*>("rules.rule7"));
+    player->SendMsg(HUD_PRINTTALK, ("Rule 8: ") + config->Fetch<const char*>("rules.rule8"));
+    return;
 }
 
 void OnPluginStart()
