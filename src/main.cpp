@@ -33,14 +33,14 @@ void Command_Test(int playerID, const char **args, uint32_t argsCount, bool sile
             return;
 
         player->SendMsg(HUD_PRINTTALK, "[1TAP] -----------------------------------------------------");
-        player->SendMsg(HUD_PRINTTALK, "Rule 1: %s "config->Fetch<const char*>("rules.rule1"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 2: %s "config->Fetch<const char*>("rules.rule2"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 3: %s "config->Fetch<const char*>("rules.rule3"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 4: %s "config->Fetch<const char*>("rules.rule4"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 5: %s "config->Fetch<const char*>("rules.rule5"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 6: %s "config->Fetch<const char*>("rules.rule6"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 7: %s "config->Fetch<const char*>("rules.rule7"),);
-        player->SendMsg(HUD_PRINTTALK, "Rule 8: %s "config->Fetch<const char*>("rules.rule1"),);
+        player->SendMsg(HUD_PRINTTALK, "Rule 1: %s ", config->Fetch<const char*>("rules.rule1"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 2: %s ", config->Fetch<const char*>("rules.rule2"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 3: %s ", config->Fetch<const char*>("rules.rule3"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 4: %s ", config->Fetch<const char*>("rules.rule4"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 5: %s ", config->Fetch<const char*>("rules.rule5"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 6: %s ", config->Fetch<const char*>("rules.rule6"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 7: %s ", config->Fetch<const char*>("rules.rule7"));
+        player->SendMsg(HUD_PRINTTALK, "Rule 8: %s ", config->Fetch<const char*>("rules.rule1"));
         return;
 }
 
