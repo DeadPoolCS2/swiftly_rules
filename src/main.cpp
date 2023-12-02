@@ -46,8 +46,8 @@ void Command_Test(int playerID, const char **args, uint32_t argsCount, bool sile
 
 void OnPluginStart()
 {
-    commands->Register("!rules", reinterpret_cast<void *>(&Command_Test));
-    commands->Register("!reguli", reinterpret_cast<void *>(&Command_Test));
+    commands->Register("rules", reinterpret_cast<void *>(&Command_Test));
+    commands->Register("reguli", reinterpret_cast<void *>(&Command_Test));
 }
 
 void OnPluginStop()
